@@ -8,7 +8,13 @@ body {
   opacity: 0.9;
 }
 #navLogo {
-  height: 40px;
+  height: 20px;
+}
+
+.navbar-brand {
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
 }
 
 #home-section {
@@ -51,8 +57,16 @@ body {
 }
 
 @media (max-width: 575.98px) {
-  #home-section .home-inner {
-    padding-top: 140px;
+  #home-section {
+    min-height: 700px;
+  }
+
+  #home-section .dark-overlay {
+    min-height: 700px;
+  }
+
+  #home-section {
+    background: rgb(31, 9, 53);
   }
 
   #mainHeader {
@@ -68,12 +82,10 @@ body {
 }
 
 @media (max-width: 768px) {
-  .mainVisible {
-    visibility: hidden;
-  }
 }
 
 @media (max-width: 991.98px) {
+  padding-top: 0px;
 }
 
 @media (min-width: 1199.98px) {
@@ -86,6 +98,34 @@ body {
   }
 
   .landingContent-lg {
+    padding-top: 50px;
+  }
+}
+
+@media (min-width: 1550px) {
+  #home-section {
+    min-height: 1000px;
+  }
+
+  #home-section .dark-overlay {
+    min-height: 1000px;
+  }
+
+  .landingContent-lg {
     padding-top: 100px;
+  }
+}
+
+@media (min-width: 2100px) {
+  #home-section {
+    min-height: 1150px;
+  }
+
+  #home-section .dark-overlay {
+    min-height: 1150px;
+  }
+
+  .landingContent-lg {
+    padding-top: 130px;
   }
 }

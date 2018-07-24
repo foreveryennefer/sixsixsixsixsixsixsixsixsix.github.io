@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
     <title>Printhouse</title>
 </head>
 
@@ -18,10 +19,39 @@
 <!-- NAVBAR -->
 
 <body data-spy="scroll" data-target="#main-nav" id="home">
-    <nav class="navbar navbar-expand-sm bg-light navbar-light fixed-top" id="main-nav">
+
+
+    <!-- LANDING SECTION -->
+
+    <header id="home-section">
+        <div class="dark-overlay">
+            <div class="home-inner container">
+                <div id="landingRow" class="row mx-auto">
+                    <div class="col-xl-9 mx-auto">
+                        <!-- landing content -->
+                        <div class="text-center landingContent-lg landingContent-sm">
+                            <h1 id="mainHeader" class="display-2 myPadding landingFirst">Print, Packaging, Perfection</h1>
+                            <!-- <p id="sm-text1" class="lead mt-3">You might know that we print business cards and letterheads but there’s so much more that we
+                                can help you with.
+                            </p> -->
+                            <p id="sm-text1" class="lead mt-3 pt-5 landingFirst">Call us on (020) 7930 1976 for a quote today</p>
+                            <div class="pt-4">
+                                <a id="entranceButton" href="#main-nav" class="btn btn-outline-success buttonScroll">
+                                    Learn More
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-sm bg-light navbar-light sticky-top" id="main-nav">
         <div class="container">
             <div>
-                <a href="index.html" class="navbar-brand">Printhouse
+                <a href="#main-nav" class="navbar-brand">Printhouse
                     <img id="navLogo" class="mb-1" href="index.html" src="/img/logo.jpg" alt="Printhouse Logo">
                 </a>
             </div>
@@ -29,9 +59,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="navbar-nav ml-auto">
+                <ul class="navbar-nav ml-auto font-weight-bold">
                     <li class="nav-item">
-                        <a href="#home" class="nav-link" data-toggle="collapse" data-target="#navbarCollapse">Home</a>
+                        <a href="#home-section" class="nav-link" data-toggle="collapse" data-target="#navbarCollapse">Home</a>
                     </li>
                     <li class="nav-item">
                         <a href="#explore-head-section" class="nav-link" data-toggle="collapse" data-target="#navbarCollapse">Explore</a>
@@ -52,41 +82,17 @@
         </div>
     </nav>
 
-    <!-- LANDING SECTION -->
-
-    <header id="home-section">
-        <div class="dark-overlay">
-            <div class="home-inner container">
-                <div id="landingRow" class="row mx-auto">
-                    <div class="col-xl-9 mx-auto">
-                        <!-- landing content -->
-                        <div class="text-center landingContent-lg landingContent-sm">
-                            <h1 id="mainHeader" class="display-2 myPadding">Print, Packaging, Perfection</h1>
-                            <!-- <p id="sm-text1" class="lead mt-3">You might know that we print business cards and letterheads but there’s so much more that we
-                                can help you with.
-                            </p> -->
-                            <p id="sm-text1" class="lead mt-3 pt-5">Call us on (020) 7930 1976 for a quote today</p>
-                            <a id="entranceButton" href="#share-head-section" class="btn btn-outline-success">
-                                Get In Touch
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
     <!-- EXPLORE HEAD -->
 
     <section id="explore-head-section">
         <div class="container-fluid bg-primary">
-            <div class="container pt-5 pb-5">
+            <div class="container pt-2 pb-2">
                 <div class="row">
                     <div class="col text-center py-5">
                         <h1 class="display-4">Explore</h1>
                         <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sapiente doloribus ut iure itaque quibusdam
                             rem accusantium deserunt reprehenderit sunt minus.</p>
-                        <a href="#" class="btn btn-outline-secondary">Find Out More</a>
+                        <a href="#create-head-section" class="btn btn-outline-light buttonScroll">Find Out More</a>
                     </div>
                 </div>
             </div>
@@ -98,9 +104,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <img src="img/explore-section1.jpg" alt="" class="img-fluid mb-3 rounded-circle">
+                    <img src="img/explore-section1.jpg" alt="" id="exploreImg" class="img-fluid mb-3 rounded-circle">
                 </div>
-                <div class="col-md-6">
+                <div id="exploreContent" class="col-md-6">
                     <h3>Explore & Connect</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore reiciendis, voluptate at alias laborum
                         odit aliquid tempore perspiciatis repudiandae hic?</p>
@@ -127,12 +133,12 @@
 
     <!-- CREATE HEAD -->
     <section id="create-head-section" class="bg-danger">
-        <div class="container pt-5 pb-5">
+        <div class="container pt-2 pb-2">
             <div class="row">
                 <div class="col text-center py-5">
                     <h1 class="display-4">Create</h1>
                     <p class="lead">We bring ideas to life</p>
-                    <a href="#" class="btn btn-outline-light">Find Out More</a>
+                    <a href="#share-head-section" class="btn btn-outline-light buttonScroll">Contact</a>
                 </div>
             </div>
         </div>
@@ -145,10 +151,10 @@
             <div class="row">
                 <!-- image -->
                 <div class="col-md-6 order-2">
-                    <img src="img/create-section1.jpg" alt="" class="img-fluid mb-3 rounded-circle">
+                    <img id="createImg" src="img/create-section1.jpg" alt="" class="img-fluid mb-3 rounded-circle">
                 </div>
                 <!-- tick list -->
-                <div class="col-md-6 order-1">
+                <div id="createContent" class="col-md-6 order-1">
                     <h3>Create Your Passion</h3>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Labore reiciendis, voluptate at alias laborum
                         odit aliquid tempore perspiciatis repudiandae hic?</p>
@@ -170,12 +176,13 @@
                     </div>
                 </div>
             </div>
+            <div id="share-dummy" class="row"></div>
         </div>
     </section>
 
     <!-- FINDUS HEAD -->
-    <section id="share-head-section" class="bg-success pt-5 pb-5">
-        <div class="container">
+    <section id="share-head-section" class="bg-success">
+        <div class="container pt-2 pb-2">
             <div class="row">
                 <div class="col text-center py-5">
                     <h1 class="display-4">Contact Us</h1>
@@ -185,20 +192,18 @@
             </div>
         </div>
     </section>
-
     <!-- FINDUS SECTION -->
     <section id="share-section" class="bg-light text-muted py-5">
         <div class="container">
             <div class="row">
                 <!-- image -->
                 <div class="col-md-6">
-                    <img src="img/location.JPG" alt="" class="img-fluid mb-3 rounded-circle">
+                    <img id="findUsImg" src="img/location.JPG" alt="" class="img-fluid mb-3 rounded-circle">
                 </div>
                 <!-- tick list -->
-                <div class="col-md-6">
-                    <h3>Find Us!</h3>
-                    <p>Visit us today for of your printing, design, and marketing solutions. We are open 6 days a week from
-                        9am-5pm.
+                <div id="findUsContent" class="col-md-6">
+                    <h3>Visit</h3>
+                    <p>We are open 6 days a week from 9am-5pm, Monday-Saturday, and close Sunday.
                     </p>
                     <div class="d-flex">
                         <div class="p-4 align-self-start">
@@ -226,22 +231,23 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col text-center py-5">
                     <button class="btn btn-success" data-toggle="modal" data-target="#contactModal">Email!</button>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
 
     <!-- FOOTER -->
-    <footer id="main-footer" class="bg-dark">
+    <footer id="main-footer" class="bg-dark pt-2">
         <div class="container">
             <div class="row">
                 <div class="col text-center ">
-                    <h3>Printhouse</h3>
-                    <p>Copyright &copy;
+                    <!-- <h3>Printhouse</h3> -->
+                    <p class="display-5">Copyright &copy;
                         <span id="year"></span>
+                        Printhouse, All rights reserved
                     </p>
                 </div>
             </div>
@@ -312,7 +318,7 @@
 
 
 
-    $("#entranceButton").on('click', function (event) {
+    $(".buttonScroll").on('click', function (event) {
         // Site by Kenneth Sicobo
         event.preventDefault();
         const hash = this.hash;
@@ -339,6 +345,69 @@
     $(document).on('click', function () {
         $('.collapse').collapse('hide');
     })
+
+    // Update's the position of the landing picture on the screen to create anti-scroll moving effect
+    var velocity = 0.5;
+    function update() {
+        var pos = $(window).scrollTop();
+        $('#home-section').each(function () {
+            var $element = $(this);
+            var height = $element.height() - 18;
+            $(this).css('backgroundPosition', '50% ' + Math.round((- pos) * velocity) + 'px');
+        });
+    };
+
+    $(window).bind('scroll', update);
+
+    window.sr = ScrollReveal();
+    sr.reveal('.navbar-brand', {
+        duration: 2000,
+        delay: 1500,
+        origin: 'left'
+    });
+    sr.reveal('#exploreImg', {
+        duration: 2000,
+        origin: 'top',
+        distance: '300px'
+    });
+    sr.reveal('#exploreContent', {
+        duration: 2000,
+        origin: 'right',
+        distance: '300px'
+    });
+    sr.reveal('#createImg', {
+        duration: 2000,
+        origin: 'bottom',
+        distance: '300px'
+    });
+    sr.reveal('#createContent', {
+        duration: 2000,
+        delay: 1500,
+        origin: 'left',
+        distance: '300px'
+    });
+    sr.reveal('#findUsImg', {
+        duration: 2000,
+        origin: 'left',
+        distance: '300px'
+    });
+    sr.reveal('#findUsContent', {
+        duration: 2000,
+        delay: 1500,
+        origin: 'right',
+        distance: '300px'
+    });
+    sr.reveal('.landingFirst', {
+        duration: 2000,
+        origin: 'right',
+        distance: '300px'
+    });
+    sr.reveal('.nextSection', {
+        duration: 2000,
+        delay: 1000,
+        origin: 'top',
+    });
+
 
 
 </script>
