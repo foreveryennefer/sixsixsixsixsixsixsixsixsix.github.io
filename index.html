@@ -60,12 +60,14 @@
                     <div class="col-xl-9 mx-auto">
                         <!-- landing content -->
                         <div class="text-center landingContent-lg">
-                            <h1 id="mainHeader" class="display-3 myPadding">Business, Print, Design</h1>
-                            <p id="sm-text1" class="lead mt-3">You might know that we print business cards and letterheads but there’s so much more that we
+                            <h1 id="mainHeader" class="display-2 myPadding">Print, Packaging, Perfection</h1>
+                            <!-- <p id="sm-text1" class="lead mt-3">You might know that we print business cards and letterheads but there’s so much more that we
                                 can help you with.
-                            </p>
-                            <p id="sm-text1" class="lead mt-3">Call us on (020) 7930 1976 for a quote today</p>
-                            <button type="button" class="btn btn-outline-light">Get In Touch</button>
+                            </p> -->
+                            <p id="sm-text1" class="lead mt-3 pt-5">Call us on (020) 7930 1976 for a quote today</p>
+                            <a id="entranceButton" href="#share-head-section" type="button" class="btn btn-outline-success">
+                                Get In Touch
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -77,7 +79,7 @@
 
     <section id="explore-head-section">
         <div class="container-fluid bg-primary">
-            <div class="container">
+            <div class="container pt-5 pb-5">
                 <div class="row">
                     <div class="col text-center py-5">
                         <h1 class="display-4">Explore</h1>
@@ -124,7 +126,7 @@
 
     <!-- CREATE HEAD -->
     <section id="create-head-section" class="bg-danger">
-        <div class="container">
+        <div class="container pt-5 pb-5">
             <div class="row">
                 <div class="col text-center py-5">
                     <h1 class="display-4">Create</h1>
@@ -171,7 +173,7 @@
     </section>
 
     <!-- FINDUS HEAD -->
-    <section id="share-head-section" class="bg-success">
+    <section id="share-head-section" class="bg-success pt-5 pb-5">
         <div class="container">
             <div class="row">
                 <div class="col text-center py-5">
@@ -250,7 +252,7 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Contact Us</h5>
+                    <h5 class="modal-title">Contact</h5>
                     <button class="close" data-dismiss="modal">
                         <span>&times;</span>
                     </button>
@@ -305,6 +307,16 @@
                 window.location.hash = hash;
             });
         }
+    });
+
+    $("#entranceButton").on('click', function (event) {
+        event.preventDefault();
+        const hash = this.hash;
+        $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 800, function () {
+            window.location.hash = hash;
+        });
     });
 
 
